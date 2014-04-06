@@ -32,6 +32,18 @@
     </dependency>
   </dependencies>
   <build>
+	  <plugins>
+			<!-- Maven Tomcat Plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>tomcat-maven-plugin</artifactId>
+				<configuration>
+					<url>http://localhost:8080/manager</url>
+					<server>TomcatServer</server>
+					<path>/IMS</path>
+				</configuration>
+			</plugin>
+		</plugins>
     <finalName>webContent</finalName>
   </build>
 </project>
